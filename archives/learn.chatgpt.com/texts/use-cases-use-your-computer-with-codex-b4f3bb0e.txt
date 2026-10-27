@@ -1,0 +1,132 @@
+← All use cases
+Use your computer with ChatGPT
+
+Let ChatGPT click, type, and navigate apps on your macOS or Windows computer.
+
+Try in the ChatGPT desktop app
+Copy page
+Introduction
+How to use
+Things to try
+Practical tips
+Copy page
+Export as PDF
+
+In the ChatGPT desktop app, use Computer Use to complete a scoped task across macOS or Windows apps and local files, with permission prompts and a final result you can review. Start signed-in browser tasks separately with Chrome.
+
+Easy
+5m
+
+Related links
+
+Computer Use
+Plugins
+Customize ChatGPT
+Best for
+Tasks that move across desktop apps, windows, or local files.
+Work that needs the macOS background experience or a dedicated Windows foreground session.
+Starter prompt
+ @Computer Help me [task].
+
+Use my desktop apps or files as needed. Ask before sending, buying, or changing anything important. 
+Introduction
+
+Use Computer Use when a task moves across desktop apps, windows, or local files. ChatGPT can click, type, and navigate the apps you allow, then return the result for review. For a website or signed-in browser session, start a separate browser task with @Chrome.
+
+Computer Use requires the ChatGPT desktop app. In supported regions, Computer Use is available on macOS and Windows in ChatGPT Work and Codex. Cloud Work tasks on web or mobile cannot directly access your local apps, files, or signed-in desktop browser sessions. You can start or steer a desktop task from Remote on mobile when you connect a Mac or Windows host.
+
+Good examples include moving notes into a system of record, checking context across a few apps before drafting a reply, or copying approved details between tools that don’t have a dedicated plugin.
+
+Here is what a safe desktop handoff can look like when Messages and Notes contain your cabin-weekend plans:
+
+ChatGPT Work
+How to use
+Open the ChatGPT desktop app and install the Computer Use plugin.
+Start your request with @Computer for desktop apps or @Chrome for browser tasks.
+Describe the task, the apps or files involved, and the result you want.
+Review access prompts and pause before actions that send, submit, or change important data.
+On Windows, keep the target app visible while Computer Use runs.
+
+If a plugin exists for an app, ChatGPT may use the plugin for the structured action. Computer Use is useful when the task depends on the app interface or a plugin isn’t available.
+
+Things to try
+
+Start with one tool: use @Computer for desktop apps and local files, or @Chrome for your browser. ChatGPT can choose other tools as needed.
+
+Turn messages into a plan
+
+ @Computer Check my Messages for our weekend trip, compare the cabin shortlist in Notes, and draft a reply. Don't send it. 
+
+Find places to stay
+
+ @Chrome Search Airbnb for cabins within two hours of San Francisco. Compare price, availability, cancellation policy, and step-free access. Don't book anything. 
+
+Catch up on a project
+
+ @Computer Check my project tracker and recent messages. Tell me what's changed, what's blocked, and which follow-ups I need to send. Don't message anyone. 
+
+Update a tracker from meeting notes
+
+ @Computer Open my meeting notes, find the decisions and action items, and prepare the matching updates in the project tracker. Ask me before submitting anything. 
+
+Work in your signed-in browser
+
+ @Chrome Open the customer account in my signed-in browser, check the latest activity and support tickets, and draft a quick update. Don't send it. 
+
+Test a website
+
+ @Chrome Open http://localhost:3000, check the pricing page on mobile, and tell me what needs fixing. Don't publish or submit anything. 
+
+Clean up local files
+
+ @Computer Review my Downloads folder and show me how you'd organize the project files. Ask before moving or deleting anything. 
+
+Show it what you’re looking at
+
+On macOS, use an appshot to share the app window in front of you. Appshots provide visual context; Computer Use can then open, inspect, and interact with the app if you allow it.
+
+ @Computer Look at this AppShot, find the same screen in the app, and tell me what I need to do. Ask before changing anything. 
+Practical tips
+Understand how the task runs on each computer
+
+On macOS, Computer Use can work in the background while you use other apps. A picture-in-picture preview shows the active app; open the preview to follow along or move it out of the way. If you use a Pet, you can move the preview there.
+
+On Windows, Computer Use runs on the active desktop and takes over the foreground. Expect the pointer and keyboard to move while the task runs. Keep the device unlocked and connected, or run the desktop app in a Windows virtual machine if you need to keep using your main desktop.
+
+Choose the right browser
+
+Browser tasks are often part of Computer Use. Choose the browser that has the context you need:
+
+Chrome extension: Use @Chrome for browser tasks, including listing searches, websites, and your existing signed-in Chrome profile, tabs, or extensions.
+Built-in browser: Use it when you want a separate browser session for localhost or public sites. It has its own browser state and can wait while you sign in.
+Cloud browser in ChatGPT Work on web or mobile: Use it for supported public, signed-out sites. It cannot access local files, open tabs, extensions, or saved passwords, sign in to sites, or complete payments.
+
+Name the browser in the prompt when it matters, and use customization for a recurring desktop preference.
+
+Avoid parallel runs in the same app
+
+Do not run two Computer Use tasks against the same app at the same time. Competing actions can change the current window or state and make the result unreliable.
+
+Prepare signed-in apps and locked use
+
+Before starting a desktop task, sign in to the apps and services it needs. On macOS, you can enable locked use if the task must continue after the Mac locks. Locked use is not available for Windows Computer Use.
+
+Related use cases
+Complete tasks from messages
+
+Use Computer Use to read one Messages thread, complete the task, and draft a reply.
+
+Knowledge Work
+Integrations
+Prepare a committee packet
+
+Use ChatGPT with prior minutes, policy drafts, stakeholder feedback, program data...
+
+Knowledge Work
+Integrations
+Build an exam study system
+
+Use ChatGPT with learning objectives, notes, readings, problem sets, prior quizzes, exam...
+
+Knowledge Work
+Analysis

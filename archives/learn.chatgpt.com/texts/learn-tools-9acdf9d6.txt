@@ -1,0 +1,71 @@
+Tools
+Docs MCP
+
+Search and read OpenAI developer docs from your editor using MCP.
+
+Guide
+Live Demo Showcase: Tools That 10x Your Codebase
+
+Live walkthrough of Codex-powered tooling that accelerates software delivery.
+
+Video
+Web search guide
+
+Guide to using web search with the Responses API.
+
+Guide
+Batch API guide
+
+Guide on how to use the Batch API to reduce costs
+
+Guide
+Built-in tools guide
+
+Guide to using OpenAI's built-in tools with the Responses API.
+
+Guide
+File search guide
+
+Guide to retrieving context from files using the Responses API.
+
+Guide
+Flex processing guide
+
+Guide on how to reduce costs with flex processing
+
+Guide
+Function calling guide
+
+Introduction to function calling with OpenAI models.
+
+Guide
+MCP guide
+
+Guide to using the Model Context Protocol for portable tools.
+
+Guide
+MCP intro
+
+Introduction video to Model Customization Platform (MCP).
+
+Video
+Responses starter app
+
+Starter application demonstrating OpenAI Responses API with tools.
+
+Code
+Tools overview guide
+
+Guide covering realtime delegation through tools.
+
+Guide
+Code interpreter guide
+
+Guide to using the built-in code interpreter tool.
+
+Guide
+Guide to Using the Responses API's MCP Tool
+
+Cookbook to connect external services using the Responses API MCP tool.
+
+Cookbook

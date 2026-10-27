@@ -1,0 +1,154 @@
+Back
+Walkthrough
+Plugins and skills
+9 min
+Mark as complete
+Plugins and skills
+
+Plugins give ChatGPT new things it can do. Skills save how you want those things done.
+
+Plugins add capabilities
+
+Plugins connect ChatGPT Work to apps and services you already use. They can bring in current information and help ChatGPT take action in tools like Slack, Gmail, Google Calendar, Notion, GitHub, and Figma.
+
+Gmail
+
+Find emails, pull out useful details, and draft replies.
+
+Google Calendar
+
+Check availability and create calendar events.
+
+Slack
+
+Find conversations, summarize context, and draft messages.
+
+Notion
+
+Find knowledge and create or update pages.
+
+More plugins for the work you do
+
+Select a plugin to open it in ChatGPT. Available plugins and actions depend on your plan and workspace.
+
+Browse plugins
+
+Open Plugins to explore what is available. Choose one for the job, connect your account, and use it directly in your conversation.
+
+ChatGPT
+chatgpt.com/plugins
+A
+Customize
+Plugins
+Skills
+Plugins
+Work with ChatGPT across your favorite tools.
+Search plugins
+Featured ›
+Google Drive
+Work with Google Docs, Sheets, and Slides
+Outlook Email
+Review repos, inspect issues, and keep everyone updated
+Gmail
+Find and reference emails from your inbox
+Teams
+Look up events and availability
+Slack
+Read and manage Slack
+SharePoint
+Summarize SharePoint sites and files
+Salesforce MCP
+Query, read, and safely update Salesforce records
+Adobe Acrobat
+Edit and organize PDFs easily
+Zoom
+Smart meeting insights from Zoom
+LinkedIn
+Find the right professional
+Google Calendar
+Manage Google Calendar events and schedules
+GitHub
+Triage PRs, issues, CI, and publish flows
+Canva
+Search, create, edit designs
+Dropbox
+Access, save and share files
+Use plugins in a task
+01
+Connect your apps
+
+Open Plugins and connect Gmail and Google Calendar, or choose the plugins your own task requires. Check the account and requested access before connecting.
+
+Gmail
+
+Find and draft email
+
+Add
+Google Calendar
+
+Review events and availability
+
+Add
+02
+Describe the outcome
+
+Ask ChatGPT to find the relevant email, check your calendar, and prepare a meeting at a time that works. Type @ in the message box and select a plugin or skill from the menu. Here, use @Gmail and @Google Calendar.
+
+03
+Review the result
+
+Open the source email and check the time, attendees, and agenda. Ask for changes or approve the event when it looks right.
+
+Google Calendar
+
+Ready for review
+Time
+Thursday · 2:00 PM
+People
+Attendees from the email
+Agenda
+Project context and next steps
+Example action
+Create meeting
+Save and reuse a skill
+
+A skill saves the instructions, references, and examples that tell ChatGPT how you want a task done. Use one when you repeat a task or want every result to follow the same structure.
+
+In the example above, you used Gmail and Google Calendar to plan a project kickoff: the first meeting for a new project.
+
+Next, ask ChatGPT to turn that email and calendar event into a source-linked brief with these sections: objective, client priorities, decisions, risks, and next steps. Review the brief, refine it, and save the process as Meeting Prep. Then run it for another meeting.
+
+For example, a skill can prepare meeting briefs, format project updates, plan weekly meals, build trip packing lists, turn notes into study guides, or review monthly spending in a consistent format.
+
+Do it once: Finish a task with the result you want.
+Save the method: Keep the instructions and examples.
+Use it again: Run the skill with new information.
+Refine it: Update the method as your needs change.
+Try it
+
+In the ChatGPT desktop app, connect Gmail and Google Calendar in Plugins before you begin. Replace [project] with your own project. Start the first prompt in Work, then copy and paste each follow-up into that same chat.
+
+Schedule a meeting
+Prepare a brief
+
+Review the source email, time, attendees, and agenda before approving the event.
+
+ Prepare a brief for this meeting using the relevant email in @Gmail and the event in @Google Calendar. Include these sections: objective, client priorities, decisions, risks, and next steps. Link to the original email and calendar event. Flag missing details instead of guessing. 
+Save a skill
+
+Review the brief and ask for changes until it has the format you want.
+
+ Save this workflow as a skill called meeting-prep. Check @Google Calendar, find the relevant email in @Gmail, and organize each brief into these sections: objective, client priorities, decisions, risks, and next steps. Link to the original email and calendar event, and flag missing details. Ask me before creating or changing any events. 
+Run it again
+ Use @meeting-prep for another meeting about [project] on my calendar. 
+
+Up next
+
+Set up scheduled tasks
+
+Ask ChatGPT to run useful work later or repeat it on a schedule, then review every run in the Scheduled tab.
+
+Previous
+Getting started with ChatGPT Work
+Next
+Set up scheduled tasks

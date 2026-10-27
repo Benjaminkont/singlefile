@@ -1,0 +1,121 @@
+← All use cases
+Set up a project teammate
+
+Keep one project moving with a dedicated, context-aware teammate.
+
+Try in the ChatGPT desktop app
+Copy page
+What to expect
+What you can use a teammate for
+Set up your teammate
+Start with your chief of staff
+Copy page
+Export as PDF
+
+Give ChatGPT Work a dedicated task for one project or workstream. It can review relevant messages, documents, decisions, and deadlines; track meaningful changes on a schedule; prepare the next step; and wait for approval before taking action.
+
+Easy
+Long-running
+
+Related links
+
+Set up a work chief of staff
+Scheduled tasks
+Best for
+Launches, customer accounts, events, or initiatives with decisions spread across connected work tools.
+Projects that need a dedicated task to track progress, blockers, owners, and next steps.
+Skills & Plugins
+Slack
+Review the messages, decisions, and follow-ups relevant to the project.
+Teams
+Review Teams messages, project decisions, and open follow-ups.
+Gmail
+Find project-related email, pending replies, and commitments.
+Outlook Email
+Find project-related Outlook email and outstanding requests.
+Google Calendar
+Check project milestones, meetings, and preparation.
+Google Drive
+Review the project brief, notes, plans, and decision history.
+Starter prompt
+ Be my dedicated teammate for [project or workstream]. Focus only on that project. If the project isn't clear, ask me before reviewing unrelated work.
+
+Review the relevant messages, email, calendar events, documents, notes, and project trackers available to you. Establish what we're trying to accomplish, who's involved, what's already been decided, the current deadlines, and what's still open. Tell me when a source is missing instead of guessing.
+
+Start with a concise project brief:
+
+- the goal and current state;
+- important decisions, owners, and deadlines;
+- what's changed;
+- blockers, dependencies, and unanswered questions; and
+- the next step that would move the project forward.
+
+Link to your sources when available, check the latest replies before surfacing old requests, and distinguish confirmed facts from assumptions. Keep your context limited to this project.
+
+Help me research questions, prepare meetings, review drafts, and write follow-ups as the project progresses. If I ask you to check back on a schedule, watch for meaningful changes.
+
+Ask before sending messages, editing documents, scheduling work, sharing information, or making commitments. 
+What to expect
+
+Give ChatGPT Work one project to focus on. A dedicated teammate can check the messages, documents, meetings, decisions, and open questions that affect that project, then help you decide what to do next. Add a scheduled check when you want it to keep watching the project.
+
+Unlike a work chief of staff, which watches across your priorities, a project teammate stays focused on a specific launch, customer account, initiative, or event.
+
+Choose the surface that fits your project:
+
+ChatGPT on the web: Keep a teammate focused on connected project messages, documents, meetings, and trackers. A scheduled check can keep watching those sources when your laptop is off.
+ChatGPT desktop app: Give a teammate access to local project files and apps. You can also ask your chief of staff to create, brief, and coordinate the teammate as a separate task. Keep your computer on and the app running if a scheduled check needs local files or desktop tools.
+
+Here’s what a project check and follow-up can look like:
+
+ChatGPT Work
+What you can use a teammate for
+Run a launch. Watch the project channel, launch checklist, approvals, assets, and release timing. Flag missing materials and decisions before they become blockers.
+Produce a podcast or video. Track scripts, recordings, review notes, sensitive footage, edit requests, and publishing deadlines.
+Ship documentation or a website. Track pull requests, review comments, preview deployments, product changes, and outstanding publication approvals.
+Manage a customer project. Keep the account conversation, meeting notes, commitments, open questions, and the next follow-up in one place.
+Set up your teammate
+Choose the project, initiative, or customer account you want the teammate to focus on.
+Connect or provide the messages, email, calendar, documents, and trackers relevant to that work.
+Start a dedicated task using the starter prompt.
+Review the initial project brief and correct any missing context.
+Continue using the same task for decisions, research, meeting preparation, and draft follow-ups.
+Add a heartbeat when you want the teammate to keep checking for project updates.
+
+Keep the project task focused. ChatGPT should ask before sending messages, updating documents, changing a tracker, scheduling work, or making commitments.
+
+Start with your chief of staff
+
+In the desktop app, you can ask your work chief of staff to create and brief the project teammate. That gives the new task the relevant context without turning your chief-of-staff thread into another project workspace.
+
+ Create a separate teammate task for the project we just discussed. Brief it on the goal, relevant messages and documents, decisions, owners, deadlines, blockers, and open questions. Share only the context needed for that project. Tell me where to find the task, and don't send messages, change documents, or make commitments without my approval. 
+
+Check on an existing teammate
+
+ Check on the existing project teammate we discussed. Tell me what changed, what's blocked, what it's waiting on, and what I need to review. Don't create a duplicate task or take action without my approval. 
+
+Add a project heartbeat
+
+ Check this project's messages, documents, tracker, and upcoming meetings every 30 minutes. Tell me when an owner, deadline, approval, blocker, or decision changes. Stay quiet when nothing meaningful has changed. Don't repeat resolved items, send messages, or change project documents without my approval. 
+
+Connected sources and scheduled tasks depend on your plan and workspace settings. Project-task coordination is available in the desktop app.
+
+Related use cases
+Audit a workflow
+
+Give ChatGPT trackers, process docs, handoff notes, dashboards, ticket history, team...
+
+Automation
+Integrations
+Build a launch campaign kit
+
+Give ChatGPT launch plans, product notes, trackers, page links, team discussion, creative...
+
+Automation
+Integrations
+Set up a work chief of staff
+
+Set up ChatGPT Work as a chief of staff that checks your connected messages, email...
+
+Automation
+Integrations

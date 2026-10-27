@@ -1,0 +1,206 @@
+Understand the change
+For admins: Prepare your workspace
+For GPT creators: Prepare your GPT
+For GPT creators: Migrate, test, and share
+Admin FAQ
+Copy Page
+Moving your custom GPT workflows to plugins
+
+Guidance for Enterprise admins preparing their workspace and GPT creators migrating, testing, and sharing replacement plugins.
+
+Custom GPTs helped you make ChatGPT your own. Plugins build on that work, bringing your instructions and knowledge into workflows that can do more.
+
+This guide is for ChatGPT Enterprise workspace admins and people migrating GPTs they created. Start with the path that fits your role:
+
+Workspace admins: Prepare your workspace, check permissions, and migrate GPTs in bulk.
+GPT creators: Prepare your GPT, then migrate, test, and share it.
+
+Using someone else’s GPT? Ask its creator or a workspace admin to migrate it, then install the replacement they share with you.
+
+Create or refine a plugin
+
+See Build plugins for guidance on building a new plugin or updating one after migration.
+
+Understand the change
+
+We’re transitioning custom GPTs to plugins. Use the milestones below to plan your migration before custom GPTs are retired.
+
+A plugin is a reusable package for a workflow that can include skills, apps, or both. Skills explain how to do a task, such as writing in your team’s style. Apps connect ChatGPT to other services for information or supported actions.
+
+Plugin
+A package for a workflow
+Can include one or both
+Skills
+Instructions for how to do the work
+Apps
+Connections to tools and information
+
+In an enterprise workspace, your admin decides which plugins you can use, including access by role where supported. They can make plugins available for you to install or install them automatically for eligible users. Sharing a plugin or publishing it to the workspace requires separate permissions.
+
+Your existing permissions still apply
+
+Plugins respect your existing app access. For example, signing in to Google Drive through ChatGPT lets its plugin work with documents your account can already access. It doesn’t unlock other files or add Google Drive permissions.
+
+You may need to connect your account or approve an action. Available features depend on your app access, workspace settings, and where you use ChatGPT.
+
+Plugins with only skills and reference files need no app connection. For each required app, users need access and any account connection or action permissions the workflow needs. If an optional app is unavailable, other capabilities may still work; capabilities that require an unavailable app cannot.
+
+Example Plugin Page
+
+With a custom GPT, you explicitly choose the GPT (by opening it or mentioning it with @ on ChatGPT web), then send it your request.
+
+With plugins, you can choose an available plugin or skill directly. In ChatGPT, use an @ mention or open + and select More, where supported.
+
+Select an available plugin from the composer, then describe the task you want it to help with.
+
+You can also describe your task: ChatGPT can automatically use a relevant installed skill, including a skill packaged in a plugin, when its description matches what you need.
+
+Test how your plugin gets selected
+
+Automatic skill selection depends on the task and available capabilities; an installed plugin won’t run on every request. After migration, test both explicit selection and a normal task request.
+
+What can a plugin do compared with a custom GPT?
+What you want to do	With a custom GPT	With a plugin
+Reuse instructions	You add instructions to guide the GPT’s responses.	A skill provides reusable instructions that guide how a task is done.
+Use team knowledge	You upload reference files as GPT knowledge.	Skills can include reference files. Review the migrated resources and test how they’re used.
+Connect to other services	Custom actions connect the GPT to external services.	Apps connect to services and supported actions. GPT custom actions need to be rebuilt separately.
+Use tools and create files	You enable available capabilities such as web search, image generation, and data analysis.	Available tools depend on the experience and workspace settings. Test the outputs your team needs.
+Start a workflow	You open or explicitly select the GPT.	You can select a plugin or skill. ChatGPT may also use a relevant installed skill automatically.
+Share with your team	You share the GPT with an allowed audience.	You share or publish the plugin under workspace permissions. Review access before rollout.
+What transfers to a plugin
+
+See what moves into a plugin and what needs rebuilding.
+
+See how a GPT’s instructions and reference files become a skill and connected apps remain part of the plugin. Custom actions do not transfer; plan to replace them with a supported app’s read or write actions, or a custom MCP server.
+
+For admins: Prepare your workspace
+
+Help your team carry its work forward: agree on migration owners, check their permissions, and plan access to the replacements.
+
+Admin notice. Admins receive an early heads-up and guidance to plan the transition and prepare their teams.
+Migration. GPT creators and workspace admins can migrate published GPTs to plugins.
+Custom GPT retirement. Custom GPTs stop working. Move the workflows you want to keep to plugins and test them before retirement.
+Choose priority migrations
+
+Start with GPTs your team relies on most. Agree with their creators on what to keep, who will maintain it, and who needs access.
+
+Allow extra time for custom actions, which need to be rebuilt separately.
+Name an owner for each GPT and record its purpose, audience, instructions, reference files, and integrations.
+Ask owners to save a few familiar prompts and good results, including one harder case, so they can compare the replacement.
+Confirm which GPTs are published. Have creators publish needed drafts while GPT creation is still available; public sharing isn’t required.
+Choose priority workflows
+
+Use ownership and recent usage to prioritize your GPT migrations.
+
+Identify the GPTs your team still relies on and consider leaving unused workflows behind. Admins with access to the ChatGPT admin plugin can request GPT names, owners, and message counts from the last 30 days to help prioritize.
+
+Review workspace permissions
+
+Before migrating, check that everyone has the access they need. Permissions control actions such as using, sharing, or publishing plugins; roles group permissions for similar responsibilities. With role-based access control (RBAC), workspace owners assign roles to people or groups.
+
+Use this table to check access for migration and the replacement plugins.
+
+Action	What admins should check
+Migrate their own custom GPTs to plugins	Enable plugins for the workspace. The person migrating must be the GPT’s creator or a workspace owner or admin, and the GPT must be published. Having access to someone else’s GPT is not enough.
+Share newly migrated GPTs (now plugins) with people or groups	Give Share plugins to people who need to share replacements with individuals or groups. People who only use a plugin don’t need this permission.
+Publish newly migrated GPTs (now plugins) to the workspace directory	Give Publish plugins to workspace to people who will publish replacements in the workspace plugin directory. This is separate from sharing directly.
+Install and use new plugins	Allow Use plugins for the intended users or roles.
+Use an included app	Enable required apps for the intended users or roles. Check that their connected accounts can access the needed information. Only supported, allowed actions can run, and required approvals still apply. Plugin installation does not add app or file permissions.
+
+Built-in migration doesn’t require upload permissions
+
+You do not need to enable Upload plugins or Upload plugins with custom MCP servers just for the built-in migration. Set any permissions for separately rebuilt integrations according to your workspace’s policies.
+
+For current settings, see Plugin and app admin controls and Skill admin controls.
+
+Check installation and app access
+
+Decide how teammates will get each replacement. Available lets eligible users install a plugin; Installed installs it for eligible users or roles. These settings do not change who the plugin is shared with.
+
+Review required apps separately: check workspace and role access, account sign-in, and action approvals. Test access with an account that has the same permissions as a typical teammate.
+
+For workspace admins: Migrate GPTs in bulk
+For GPT creators: Prepare your GPT
+
+Before migrating a GPT you created, save its intended audience and a few familiar prompts and results for testing. Check the table below for anything that needs extra attention. Admins migrating on a creator’s behalf should review these details with them.
+
+If your custom GPT…	What to review
+Uses custom actions	Custom actions don’t transfer. Rebuild needed integrations with a supported connector or custom MCP connection, then test them before your team switches.
+Depends on a model, detailed instructions, or a strict format	The selected model doesn’t carry over; Enterprise defaults apply. Compare familiar prompts and results. Check that the right skill is selected and follows your instructions and format, since behavior can differ.
+Relies on files, tools, or previous chat context	Check that files, templates, and examples are present and used correctly; transfer and retrieval may differ. Test required tools, such as web search, images, data analysis, or file creation. GPT capability settings don’t guarantee the same setup. Conversation starters and previous chats may not copy, so save useful prompts and identify needed context.
+Is shared with teammates or people outside your workspace	Record the intended audience and verify they can install and use the replacement. Show users how to install or select it. Check the replacement’s sharing settings. Check access for external users: public GPTs in affected Enterprise workspaces are included, but public sharing and timelines for other plans may differ.
+Needs updates during the transition	The original GPT stays usable until retirement. Maintain and test the replacement plugin as your workflow changes.
+For GPT creators: Migrate, test, and share
+
+Use these steps for a published GPT you created. Workspace admins can also use them to help creators migrate individual GPTs.
+
+Before you migrate: The original GPT becomes read-only after migration. You can continue using it until retirement, but future edits must be made in the replacement plugin.
+
+Step 1: Convert your GPT
+
+Go to My GPTs, find your GPT under Created by me, and select Migrate to plugin. You can also ask a workspace admin for help.
+
+Migration turns your GPT’s instructions into a skill and brings over its knowledge files and connected apps. Rebuild custom actions separately. Save familiar prompts: conversation starters do not transfer one-to-one. The selected model does not carry over, and capability settings do not guarantee the same tools or behavior. Review migrated files and test required tools before sharing.
+
+If you don’t see Migrate to plugin, see Why don’t I see the migration option? in the Admin FAQ.
+
+Your new plugin starts private. Test it, then share it with the people who need access—even if they could already use the original GPT.
+
+Follow the migration steps, then review and install your plugin.
+
+This video shows an earlier app interface. In the current app, select Customize, then Plugins, in the left navigation to find your plugins.
+
+Step 2: Test with familiar work
+
+Try the plugin on familiar tasks and one harder case. Check the following before sharing it.
+
+Is the right skill selected, and does it follow your instructions?
+Does it use the expected reference material and produce complete answers or files with the required structure, fields, and format?
+Does it handle the harder case correctly and respond in a workable amount of time?
+Are the tools and integrations it needs available?
+
+Switch after the workflow is ready
+
+If a required capability is missing, wait to switch that workflow until you have a tested alternative.
+
+Test familiar workflows and refine the plugin before sharing it.
+
+Step 3: Share and verify access
+
+Review who can access the new plugin. To share with people or groups, you need Share plugins access. To publish to the workspace, you need Publish plugins to workspace. Have an intended user open and test the replacement.
+
+For people using the replacement: After the creator or admin shares the plugin with you, install it before using it, unless your admin has installed it for you. Sharing access and installation are separate steps.
+
+If you can’t share or publish the plugin, ask your admin to check your permissions before announcing the switch.
+
+Step 4: Help your team switch
+
+Share the replacement link, explain key differences, and demonstrate a familiar task. Update onboarding, instructions, and saved resources, and name an owner for future changes and questions.
+
+After migration, the plugin’s creator or a workspace owner or admin can edit the replacement. Rerun your important tests after each change.
+
+What happens to the original GPT?
+
+Until retirement, the original GPT stays usable, and you can continue editing an existing GPT that you have not migrated, even after new GPT creation stops. Once you migrate a GPT, the original becomes read-only. At retirement, custom GPTs stop running and leave the GPT directory.
+
+Admin FAQ
+
+Find answers to common questions about preparing your workspace and helping your team switch.
+
+Preparing your workspace
+Can admins migrate many GPTs at once?
+Who can migrate a GPT, and how does the process work?
+Why don’t I see the migration option?
+Which permissions should I review before people start migrating?
+What do employees need to use a migrated plugin?
+Can employees use migrated plugins in Chat, or do they need Work?
+How should I manage access when we roll out the replacements?
+Testing and ongoing administration
+Will a migrated plugin behave exactly like the original GPT?
+What should I do about GPTs that use custom actions?
+What happens to the original GPT after migration?
+Can we still migrate a GPT after retirement?
+Which admin controls apply after migration?
+How should admins plan for plugin usage and costs?
+Previous
+Skill controls

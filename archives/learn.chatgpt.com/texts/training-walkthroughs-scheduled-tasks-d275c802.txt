@@ -1,0 +1,66 @@
+Back
+Walkthrough
+Set up scheduled tasks
+7 min
+Mark as complete
+Set up scheduled tasks
+
+Ask ChatGPT to run useful work later or repeat it on a schedule, then review every run in the Scheduled tab.
+
+Do it once, then schedule it
+
+Ask ChatGPT in plain language what to do and when.
+
+First, run the task in a regular chat and refine the result. When it looks right, stay in the same chat and tell ChatGPT when to run it again. ChatGPT turns that request into a scheduled task.
+
+For this example, connect Gmail and Google Calendar in Plugins (see more about plugins). ChatGPT can then use the calendar events and related emails to prepare source-linked meeting briefs.
+
+Manage it from Scheduled
+
+The Scheduled tab acts like an inbox for upcoming tasks and completed runs. Open it to see what is active, what is paused, and when each task will run next.
+
+Open a task to review its latest result and run history. You can also edit the instructions or schedule, pause the task, or delete it.
+
+Scheduled
+
+Ask ChatGPT to schedule tasks, set reminders, or monitor for updates
+
+Search scheduled tasks
+All
+Active
+Paused
+Mark all as read
+Daily inbox summary
+Every weekday at 8:00 AM·Next run in 16 hours
+Weekly project update
+Fridays at 4:00 PM·Next run in 2 days
+Meeting follow-up reminders
+Daily at 5:00 PM·Next run in 4 hours
+
+Use plugins and skills with scheduled tasks. Plugins such as Google Calendar and Gmail can provide current information for each run. A skill preserves the method, and the scheduled task decides when the work happens.
+
+If the task only needs connected tools, run it on the web or choose Cloud in the desktop app when available. Keep your computer on and the desktop app running when a task needs local files or a skill saved only on that computer.
+
+Try it
+
+In Plugins, connect Gmail and Google Calendar. Check that you selected the right accounts, then complete both steps in the same Work chat. If today is empty, change the first prompt to a date with meetings.
+
+First, run it once
+Then, add the schedule
+
+Copy this prompt into the same chat.
+
+ Schedule this task to run every weekday at 9:00 AM. On each run, use that day’s meetings and the latest relevant emails. Return the same source-linked briefs without sending messages or changing events. 
+
+Open Scheduled, check the next run, and pause the task if you were only practicing.
+
+Up next
+
+Creating slides and docs
+
+Turn messy source material into a clear document, shape the refined content into a slide deck, and save both formats as templates to reuse.
+
+Previous
+Plugins and skills
+Next
+Creating slides and docs

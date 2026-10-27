@@ -1,0 +1,196 @@
+Agents
+API deployment checklist
+
+Checklist for tuning Responses API applications before launch.
+
+Guide
+Codex Prompting Guide
+
+Codex models advance the frontier of intelligence and efficiency and our recommended agentic coding model. Follow this guide closely to ensure you’re getting th
+
+Cookbook
+Context Engineering & Coding Agents with Cursor
+
+Session on structuring context for agent workflows inside the Cursor editor.
+
+Video
+Live Demo Showcase: Tools That 10x Your Codebase
+
+Live walkthrough of Codex-powered tooling that accelerates software delivery.
+
+Video
+ChatKit advanced samples
+
+Advanced samples showcasing the capabilities of ChatKit (part of AgentKit).
+
+Code
+ChatKit starter app
+
+Integrate ChatKit with an Agent Builder workflow in your application.
+
+Code
+Agents SDK — Python
+
+Python SDK for developing agents with OpenAI.
+
+Code
+Agents SDK — TypeScript
+
+TypeScript SDK for developing agents with OpenAI.
+
+Code
+Agents SDK quickstart
+
+Step-by-step guide to quickly build agents with the OpenAI Agents SDK.
+
+Guide
+Agents SDK quickstart
+
+Quickstart project for building agents with the Agents SDK.
+
+Code
+Background mode guide
+
+Guide to running tasks in the background with Responses.
+
+Guide
+Build hour — agentic tool calling
+
+Build hour giving an overview of agentic tool calling.
+
+Video
+Build hour — built-in tools
+
+Build hour giving an overview of built-in tools available in the Responses API.
+
+Video
+Building agents guide
+
+Official guide to building agents using the OpenAI platform.
+
+Guide
+Building guardrails for agents
+
+Guide to implementing safeguards and guardrails in agent applications.
+
+Guide
+Computer Use API — starter app
+
+Sample app showcasing Computer Use API integration.
+
+Code
+Conversation state guide
+
+Guide for managing conversation state with the Responses API.
+
+Guide
+OpenAI models page
+
+Overview of the models available on the OpenAI platform.
+
+Guide
+Orchestrating multiple agents
+
+Guide to coordinating multiple agents with shared context.
+
+Guide
+Realtime agent demo
+
+Video introduction to the TypeScript Agents SDK.
+
+Video
+Realtime tool delegation guide
+
+Guide on delegating tasks through tools in realtime agents.
+
+Guide
+Responses API — tools and features
+
+Overview video of available tools and capabilities in the Responses API.
+
+Video
+Responses guide
+
+Introduction to the Responses API and its endpoints.
+
+Guide
+Responses starter app
+
+Starter application demonstrating OpenAI Responses API with tools.
+
+Code
+Responses vs. chat completions guide
+
+Comparison of the Responses API and Chat Completions.
+
+Guide
+Tools overview guide
+
+Guide covering realtime delegation through tools.
+
+Guide
+Tracing module
+
+Guide to monitoring and debugging agents with tracing.
+
+Guide
+Unlock agentic power — Agents SDK
+
+Video demonstrating advanced capabilities of the Agents SDK.
+
+Video
+Voice agents guide
+
+Guide to building voice agents using speech-to-speech API.
+
+Guide
+CS agents demo
+
+Demo showcasing customer service agents orchestration.
+
+Code
+Realtime agents starter app
+
+Starter app demonstrating realtime agent capabilities.
+
+Code
+Support agent demo
+
+Demo showing a customer support agent with a human in the loop.
+
+Code
+Eval Driven System Design - From Prototype to Production
+
+Cookbook for eval-driven design of a receipt parsing automation workflow.
+
+Cookbook
+Multi-Agent Portfolio Collaboration with OpenAI Agents SDK
+
+Cookbook for multi-agent portfolio analysis workflows using the OpenAI Agents SDK.
+
+Cookbook
+o3/o4-mini Function Calling Guide
+
+Cookbook to improve o3/o4-mini function calling with prompt best practices.
+
+Cookbook
+Evals API Use-case - Responses Evaluation
+
+Cookbook to evaluate new models against stored Responses API logs.
+
+Cookbook
+Multi-Tool Orchestration with RAG approach using OpenAI's Responses API
+
+Cookbook to route queries across tools with RAG using the Responses API.
+
+Cookbook
+Doing RAG on PDFs using File Search in the Responses API
+
+Cookbook to search PDFs with the Responses API file search tool.
+
+Cookbook
+Orchestrating Agents: Routines and Handoffs
+
+Cookbook for orchestrating agent workflows with routines and handoffs.
+
+Cookbook

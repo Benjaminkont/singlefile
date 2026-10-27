@@ -1,0 +1,136 @@
+Agents
+
+Agents are systems that independently accomplish tasks on your behalf. Agents use an LLM to execute instructions and make decisions. They have access to tools to gather context and take actions, always operating within clearly defined guardrails.
+
+Functions
+Agents API
+Agents SDK
+Responses
+All recipes34
+Run Agents API sandboxes on AWS Lambda MicroVMs
+Agents API
+Sep 29, 2026
+Optimizing Customer Support Agents for Cost and Quality
+Evals
+Sep 14, 2026
+Build an SRE agent for incident response
+Agents API
+Sep 10, 2026
+Build a Slack bot with the Agents API
+Agents API
+Sep 10, 2026
+Build a data analyst with the Agents API
+Agents API
+Sep 10, 2026
+GPT-Live evaluation guide
+Audio
+Evals
+Responses
+Speech
+Sep 10, 2026
+Build a ChatGPT plugin with the OpenAI Agents SDK and Amazon Bedrock AgentCore
+Agents SDK
+ChatGPT
+Evals
+Sep 3, 2026
+Build a per-run spending controller with the Responses API
+Responses
+Aug 17, 2026
+Controlled Agentic Commerce with AgentCore Payments
+Agents SDK
+Security
+Aug 13, 2026
+Build a prior authorization review assistant with the OpenAI Agents SDK and Amazon Bedrock AgentCore
+Agents SDK
+Aug 10, 2026
+Combining security scanners with the Agents SDK
+Agents SDK
+Security
+Aug 5, 2026
+Iterating Development Workflows with Codex
+Codex
+Aug 3, 2026
+AML Analysis with the Agents SDK on Amazon Bedrock
+Agents SDK
+Evals
+Security
+Jul 23, 2026
+Enabling Long-Term Agent Memory with Oracle AI Agent Memory
+Agents SDK
+Jul 16, 2026
+Trigger a Workspace Agent from the API
+ChatGPT
+Jun 18, 2026
+SchemaFlow: Agentic Database Change Impact Analysis, SQL Generation, and Eval Guardrails
+Agents SDK
+Evals
+Jun 5, 2026
+Getting Started with OpenAI Models on Amazon Bedrock
+Responses
+May 31, 2026
+Macro Evals for Agentic Systems
+Evals
+May 19, 2026
+Build an Agent Improvement Loop with Traces, Evals, and Codex
+Agents SDK
+Codex
+Evals
+May 12, 2026
+Build iterative repair loops with Codex
+Codex
+Evals
+May 11, 2026
+Using Goals in Codex
+Codex
+May 9, 2026
+Migrate from the Claude Agent SDK to the OpenAI Agents SDK
+Agents SDK
+Security
+May 7, 2026
+Agents SDK Deployment Manager
+Agents SDK
+May 5, 2026
+Building Reliable Agents with Memory and Compaction
+Agents SDK
+May 1, 2026
+Building workspace agents in ChatGPT to complete repeatable, end-to-end work
+ChatGPT
+Security
+Apr 22, 2026
+Computer Use Agents in Daytona Sandboxes
+Agents SDK
+Security
+Apr 19, 2026
+Migrate a Legacy Codebase with Sandbox Agents
+Agents SDK
+Evals
+Security
+Apr 7, 2026
+Codex Prompting Guide
+Codex
+Responses
+Feb 25, 2026
+Skills in OpenAI API
+Responses
+Security
+Feb 10, 2026
+Realtime Eval Guide
+Audio
+Evals
+Responses
+Speech
+Jan 25, 2026
+Context Engineering for Personalization - State Management with Long-Term Memory Notes
+Agents SDK
+Jan 5, 2026
+Context Engineering - Short-Term Memory Management with Sessions
+Agents SDK
+Sep 9, 2025
+GPT-5 Prompt Migration and Improvement Using the New Optimizer
+Reasoning
+Responses
+Aug 7, 2025
+Temporal Agents with Knowledge Graphs
+Functions
+Responses
+Jul 22, 2025

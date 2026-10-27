@@ -1,0 +1,462 @@
+{
+  "name": "ChatGPT Learn",
+  "origin": "https://learn.chatgpt.com",
+  "targets": [
+    {
+      "url": "https://learn.chatgpt.com/blog/automating-repetitive-work-at-openai-with-codex",
+      "file": "blog-automating-repetitive-work-at-openai-with-codex-3d38d6bb.html",
+      "title": "Automating repetitive work at OpenAI with Codex",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/blog/codex-as-a-platform",
+      "file": "blog-codex-as-a-platform-f8c401c2.html",
+      "title": "Codex as a platform: build on the open agent harness | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/blog/one-year-of-responses",
+      "file": "blog-one-year-of-responses-0c444847.html",
+      "title": "From prompts to products: One year of Responses | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/blog/responses-api",
+      "file": "blog-responses-api-de1c664a.html",
+      "title": "Why we built the Responses API | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+      "file": "blog-rethinking-skills-and-prompts-for-gpt-6-astra-6407ea9d.html",
+      "title": "Rethinking skills and prompts for GPT-6 Astra | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/blog/run-long-horizon-tasks-with-codex",
+      "file": "blog-run-long-horizon-tasks-with-codex-2d3fb5ea.html",
+      "title": "Run long horizon tasks with Codex | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/blog/skills-shell-tips",
+      "file": "blog-skills-shell-tips-853114a8.html",
+      "title": "Shell + Skills + Compaction: Tips for long-running agents that do real work | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/blog/topic/api",
+      "file": "blog-topic-api-153cf757.html",
+      "title": "API blog posts | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/articles/chatgpt-agents-sales-meeting-prep",
+      "file": "cookbook-articles-chatgpt-agents-sales-meeting-prep-39d26253.html",
+      "title": "Building workspace agents in ChatGPT to complete repeatable, end-to-end work",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/articles/codex_exec_plans",
+      "file": "cookbook-articles-codex_exec_plans-4b52c8eb.html",
+      "title": "Using PLANS.md for multi-hour problem solving",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/articles/per_run_spending_controller_responses_api",
+      "file": "cookbook-articles-per_run_spending_controller_responses_api-4936a7a9.html",
+      "title": "Build a per-run spending controller with the Responses API",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/agents_api/apps/slack_bot/readme",
+      "file": "cookbook-examples-agents_api-apps-slack_bot-readme-0edc5f3e.html",
+      "title": "Build a Slack bot with the Agents API",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/agents_api/sandboxes/aws/readme",
+      "file": "cookbook-examples-agents_api-sandboxes-aws-readme-21c46b9b.html",
+      "title": "Run Agents API sandboxes on AWS Lambda MicroVMs",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/agents_sdk/building_reliable_agents_memory_compaction",
+      "file": "cookbook-examples-agents_sdk-building_reliable_agents_memory_compaction-878cd0eb.html",
+      "title": "Building Reliable Agents with Memory and Compaction",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/agents_sdk/computer_use_with_daytona/computer_use_with_daytona",
+      "file": "cookbook-examples-agents_sdk-computer_use_with_daytona-computer_use_with_daytona-1314ff78.html",
+      "title": "Computer Use Agents in Daytona Sandboxes",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/agents_sdk/context_personalization",
+      "file": "cookbook-examples-agents_sdk-context_personalization-c741b656.html",
+      "title": "Context Engineering for Personalization - State Management with Long-Term Memory Notes",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/agents_sdk/deployment_manager/readme",
+      "file": "cookbook-examples-agents_sdk-deployment_manager-readme-c98f1de3.html",
+      "title": "Agents SDK Deployment Manager",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/agents_sdk/migrate-from-claude-agent-sdk/readme",
+      "file": "cookbook-examples-agents_sdk-migrate-from-claude-agent-sdk-readme-df084a86.html",
+      "title": "Migrate from the Claude Agent SDK to the OpenAI Agents SDK",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/agents_sdk/multi-agent-portfolio-collaboration/multi_agent_portfolio_collaboration",
+      "file": "cookbook-examples-agents_sdk-multi-agent-portfolio-collaboration-multi_agent_portfolio_collaboration-61881059.html",
+      "title": "Multi-Agent Portfolio Collaboration with OpenAI Agents SDK",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/agents_sdk/session_memory",
+      "file": "cookbook-examples-agents_sdk-session_memory-40e47507.html",
+      "title": "Context Engineering - Short-Term Memory Management with Sessions",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/chatgpt/workspace_agents/workspace-agents-api-trigger",
+      "file": "cookbook-examples-chatgpt-workspace_agents-workspace-agents-api-trigger-14569bdc.html",
+      "title": "Trigger a Workspace Agent from the API",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/codex/build_iterative_repair_loops_with_codex",
+      "file": "cookbook-examples-codex-build_iterative_repair_loops_with_codex-c14425e1.html",
+      "title": "Build iterative repair loops with Codex",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/codex/using_goals_in_codex",
+      "file": "cookbook-examples-codex-using_goals_in_codex-c6c9c7bb.html",
+      "title": "Using Goals in Codex",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/file_search_responses",
+      "file": "cookbook-examples-file_search_responses-6bfa5b16.html",
+      "title": "Doing RAG on PDFs using File Search in the Responses API",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/mcp/mcp_tool_guide",
+      "file": "cookbook-examples-mcp-mcp_tool_guide-08a3f951.html",
+      "title": "Guide to Using the Responses API's MCP Tool",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/o-series/o3o4-mini_prompting_guide",
+      "file": "cookbook-examples-o-series-o3o4-mini_prompting_guide-02194300.html",
+      "title": "o3/o4-mini Function Calling Guide",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/orchestrating_agents",
+      "file": "cookbook-examples-orchestrating_agents-68b2299c.html",
+      "title": "Orchestrating Agents: Routines and Handoffs",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/partners/aws/chatgpt_agents_sdk_aws_agentcore_cookbook/notebooks/chatgpt_agents_sdk_aws_agentcore_cookbook",
+      "file": "cookbook-examples-partners-aws-chatgpt_agents_sdk_aws_agentcore_cookbook-notebooks-chatgpt_agents_sd-2ddfce97.html",
+      "title": "Build a ChatGPT plugin with the OpenAI Agents SDK and Amazon Bedrock AgentCore",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/partners/temporal_agents_with_knowledge_graphs/temporal_agents",
+      "file": "cookbook-examples-partners-temporal_agents_with_knowledge_graphs-temporal_agents-16acad24.html",
+      "title": "Temporal Agents with Knowledge Graphs",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/responses_api/responses_api_tool_orchestration",
+      "file": "cookbook-examples-responses_api-responses_api_tool_orchestration-8979a29a.html",
+      "title": "Multi-Tool Orchestration with RAG approach using OpenAI's Responses API",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/skills_in_api",
+      "file": "cookbook-examples-skills_in_api-a8bc11e6.html",
+      "title": "Skills in OpenAI API",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/examples/vector_databases/oracle_db/deep_research_openai_agents",
+      "file": "cookbook-examples-vector_databases-oracle_db-deep_research_openai_agents-3db2b6b5.html",
+      "title": "Enabling Long-Term Agent Memory with Oracle AI Agent Memory",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/cookbook/topic/agents",
+      "file": "cookbook-topic-agents-b719bf39.html",
+      "title": "Agents • Cookbook",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "file": "docs-agent-configuration-subagents-e475dd5d.html",
+      "title": "Subagents | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/agent-configuration/subagents"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/automations",
+      "file": "docs-automations-803acf44.html",
+      "title": "Scheduled tasks | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/automations"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/build-plugins",
+      "file": "docs-build-plugins-7581fbcf.html",
+      "title": "Build plugins | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/build-plugins"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "file": "docs-build-skills-a07c3ce0.html",
+      "title": "Build skills | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/build-skills"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/computer-use",
+      "file": "docs-computer-use-ec21f0db.html",
+      "title": "Computer Use | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/computer-use"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/custom-prompts",
+      "file": "docs-custom-prompts-21aa7d2c.html",
+      "title": "Custom Prompts | ChatGPT Learn",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/customization/memories",
+      "file": "docs-customization-memories-f6319305.html",
+      "title": "Memories | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/customization/memories"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/customization/overview",
+      "file": "docs-customization-overview-c117f889.html",
+      "title": "Customization | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/customization/overview"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/dots/tasks-and-memory",
+      "file": "docs-dots-tasks-and-memory-7a097558.html",
+      "title": "Tasks and memory | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/dots/tasks-and-memory"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/extend/mcp",
+      "file": "docs-extend-mcp-48e40655.html",
+      "title": "Model Context Protocol | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/extend/mcp"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/extend/mcp?surface=cli",
+      "file": "docs-extend-mcp-1f3c3da8.html",
+      "title": "Model Context Protocol | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/mcp"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/extend/record-and-replay",
+      "file": "docs-extend-record-and-replay-d63d85d1.html",
+      "title": "Record & Replay | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/extend/record-and-replay"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/hooks",
+      "file": "docs-hooks-99bc0cb8.html",
+      "title": "Hooks | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/hooks"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/long-running-work",
+      "file": "docs-long-running-work-3cd1899b.html",
+      "title": "Long-running work | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/long-running-work"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/migrate-custom-gpts",
+      "file": "docs-migrate-custom-gpts-c725a878.html",
+      "title": "Moving your custom GPT workflows to plugins | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/migrate-custom-gpts"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/skills-and-plugins",
+      "file": "docs-skills-and-plugins-b07ddb18.html",
+      "title": "Skills & Plugins | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/skills-and-plugins"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/webmcp",
+      "file": "docs-webmcp-c2653b5e.html",
+      "title": "Site tools | ChatGPT Learn",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/webmcp"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/learn/agents",
+      "file": "learn-agents.html",
+      "title": "Agents | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/learn/cua",
+      "file": "learn-cua-587a41e5.html",
+      "title": "Computer Use | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/learn/docs-mcp",
+      "file": "learn-docs-mcp-9e7a37f6.html",
+      "title": "Docs MCP | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/learn/tools",
+      "file": "learn-tools-9acdf9d6.html",
+      "title": "Tools | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/tracks/building-agents",
+      "file": "tracks-building-agents-3b858078.html",
+      "title": "Building agents",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/training/walkthroughs/plugins-and-skills",
+      "file": "training-walkthroughs-plugins-and-skills-99806f50.html",
+      "title": "ChatGPT Training | Plugins and skills",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/training/walkthroughs/scheduled-tasks",
+      "file": "training-walkthroughs-scheduled-tasks-d275c802.html",
+      "title": "ChatGPT Training | Set up scheduled tasks",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/training/walkthroughs/using-your-computer-and-browser",
+      "file": "training-walkthroughs-using-your-computer-and-browser-faf392eb.html",
+      "title": "ChatGPT Training | Using your computer and browser",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/use-cases/agent-friendly-clis",
+      "file": "use-cases-agent-friendly-clis-5d9fcca2.html",
+      "title": "Create a CLI Codex can use | ChatGPT use cases",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/use-cases/audit-workflow",
+      "file": "use-cases-audit-workflow-8612b0b0.html",
+      "title": "Audit a workflow | ChatGPT use cases",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/use-cases/build-an-ai-tour-guide",
+      "file": "use-cases-build-an-ai-tour-guide-d1316515.html",
+      "title": "Build an AI tour guide | ChatGPT use cases",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/use-cases/follow-goals",
+      "file": "use-cases-follow-goals-95ad20b1.html",
+      "title": "Follow a goal | ChatGPT use cases",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/use-cases/follow-goals"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/use-cases/project-teammate",
+      "file": "use-cases-project-teammate-6e647ce7.html",
+      "title": "Set up a project teammate | ChatGPT use cases",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/use-cases/project-teammate"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/use-cases/reusable-codex-skills",
+      "file": "use-cases-reusable-codex-skills-c7b8af3b.html",
+      "title": "Save workflows as skills | ChatGPT use cases",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/use-cases/reusable-codex-skills"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/use-cases/use-your-computer-with-codex",
+      "file": "use-cases-use-your-computer-with-codex-b4f3bb0e.html",
+      "title": "Use your computer with ChatGPT | ChatGPT use cases",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/use-cases/use-your-computer-with-codex"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/use-cases/verified-operations-workflows",
+      "file": "use-cases-verified-operations-workflows-a7da06cd.html",
+      "title": "Run verified operations | ChatGPT use cases",
+      "aliases": [
+        "https://learn.chatgpt.com/codex/use-cases/verified-operations-workflows"
+      ]
+    },
+    {
+      "url": "https://learn.chatgpt.com/workspace-agents",
+      "file": "workspace-agents-76924351.html",
+      "title": "Workspace Agents – ChatGPT | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/workspace-agents/authentication",
+      "file": "workspace-agents-authentication-a41b9ab3.html",
+      "title": "Authenticate with Workspace Agent access tokens – Workspace Agents | OpenAI Developers",
+      "aliases": []
+    },
+    {
+      "url": "https://learn.chatgpt.com/workspace-agents/trigger-runs",
+      "file": "workspace-agents-trigger-runs-c3547ffc.html",
+      "title": "Trigger workspace agent runs – Workspace Agents | OpenAI Developers",
+      "aliases": []
+    }
+  ]
+}

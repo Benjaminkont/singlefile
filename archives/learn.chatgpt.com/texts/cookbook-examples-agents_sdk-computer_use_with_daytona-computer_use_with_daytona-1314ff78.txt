@@ -1,0 +1,324 @@
+Requirements
+Install dependencies
+Imports and environment
+The computer-use adapter
+The form, the data, and the prompt
+Create the sandbox
+Serve the form inside the sandbox
+Run the agent
+Watch the recording
+Clean up the sandbox
+Where to take this next
+Copy Page
+Apr 19, 2026
+Computer Use Agents in Daytona Sandboxes
+Lovre Pesut
+View on GitHub
+Download raw
+
+Plenty of useful work still lives behind browser UIs with no public API: third-party dashboards, admin panels, form-heavy workflows. The Agents SDK’s Computer Use tool lets an agent see and control a desktop. In this cookbook, we use a Daytona sandbox as the source of that desktop.
+
+The Computer Use tool needs just a handful of primitives to drive a desktop: screenshot, click, type, scroll, press keys. A Daytona sandbox wraps a Linux desktop (browser included) in a Python SDK that exposes exactly those primitives. A thin adapter implementing the Agents SDK’s AsyncComputer interface plugs the sandbox into the tool.
+
+The agent loop runs in this notebook while the sandbox does the actual clicking and typing. As a demo, in this cookbook we have an agent fill out a web form. The form itself is served inside the sandbox on localhost:8080, and the whole session is recorded to an .mp4 embedded below.
+
+The same pattern works for any task you’d describe as “open an app, navigate somewhere, interact with the screen”: testing UI flows end-to-end, driving legacy desktop software, or any workflow that only exists as a human-facing interface.
+
+Below you can watch an agent drive the sandbox to fill out a complex multi-page form. The rest of this cookbook walks through the machinery that makes it run.
+
+Requirements
+Python 3.10+
+A Daytona account and an API key, exported as DAYTONA_API_KEY
+An OpenAI API key, exported as OPENAI_API_KEY
+The OpenAI Agents SDK and the Daytona Python SDK (see the install cell below)
+
+Keep both API keys in your shell environment. This notebook reads them with os.environ[...] and never writes them to the sandbox.
+
+Install dependencies
+
+Clone the cookbook and move into this example directory:
+
+git clone https://github.com/openai/openai-cookbook.git
+cd openai-cookbook/examples/agents_sdk/computer_use_with_daytona
+
+Open computer_use_with_daytona.ipynb from that directory and install the dependencies below.
+
+%pip install -r requirements.txt --quiet
+Imports and environment
+
+We import from three places: the Agents SDK (Agent, Runner, ComputerTool, and the AsyncComputer / Button / Environment types we’ll implement against), the Daytona SDK (AsyncDaytona plus CreateSandboxFromSnapshotParams), and the usual standard-library async/path helpers. IPython.display.Video is only needed at the very end, to play the recording inline.
+
+from __future__ import annotations
+
+import asyncio
+import logging
+import os
+from pathlib import Path
+from typing import Any
+
+from daytona import AsyncDaytona, CreateSandboxFromSnapshotParams
+
+from agents import Agent, AsyncComputer, Button, ComputerTool, Environment, Runner, trace
+
+from IPython.display import Video
+
+
+# The Daytona and OpenAI keys live in the shell environment.
+assert os.environ.get("DAYTONA_API_KEY"), "DAYTONA_API_KEY is not set."
+assert os.environ.get("OPENAI_API_KEY"), "OPENAI_API_KEY is not set."
+
+logger = logging.getLogger("computer_use_with_daytona")
+The computer-use adapter
+
+The Agents SDK’s Computer Use tool works against any object that implements the AsyncComputer interface: a screenshot method that returns a base64 PNG, plus click, double_click, scroll, type, keypress, move, drag, and wait. The harness drives this interface; the model never talks to Daytona directly.
+
+Daytona’s desktop sandbox exposes a matching API under sandbox.computer_use.*: screenshot.take_full_screen(), mouse.click/move/scroll/drag, keyboard.type/press, plus start() / stop() for the underlying Xvfb and VNC processes. The class below is the adapter between the two.
+
+_DEFAULT_WIDTH, _DEFAULT_HEIGHT = 1024, 768
+
+# CUA emits DOM KeyboardEvent.key-style names (for example "ArrowDown"); Daytona
+# uses robotgo key names internally. Lowercase, then translate the few that
+# differ. Keys not in the table pass through unchanged.
+_CUA_KEY_TO_DAYTONA: dict[str, str] = {
+    "arrowdown": "down",
+    "arrowleft": "left",
+    "arrowright": "right",
+    "arrowup": "up",
+    "option": "alt",
+    "super": "cmd",
+    "win": "cmd",
+}
+
+
+def _normalize_key(key: str) -> str:
+    if len(key) > 1:
+        key = _CUA_KEY_TO_DAYTONA.get(key.lower(), key.lower())
+    return key
+
+
+class DaytonaAsyncComputer(AsyncComputer):
+    """AsyncComputer implementation backed by a Daytona sandbox desktop."""
+
+    def __init__(
+        self,
+        sandbox: Any,
+        *,
+        width: int = _DEFAULT_WIDTH,
+        height: int = _DEFAULT_HEIGHT,
+    ) -> None:
+        self._sandbox = sandbox
+        self._width = width
+        self._height = height
+
+    async def __aenter__(self) -> DaytonaAsyncComputer:
+        await self._sandbox.computer_use.start()
+        # Give Xvfb, the window manager, and the VNC server a moment to come up.
+        await asyncio.sleep(2)
+        return self
+
+    async def __aexit__(self, exc_type: Any, exc_val: Any, exc_tb: Any) -> None:
+        try:
+            await self._sandbox.computer_use.stop()
+        except asyncio.CancelledError:
+            raise
+        except Exception:
+            logger.warning("Failed to stop computer-use processes", exc_info=True)
+
+    @property
+    def environment(self) -> Environment:
+        # CUA's Environment enum is {"windows", "mac", "ubuntu", "browser"} — there is
+        # no generic "linux", so "ubuntu" is the right value for any Linux desktop
+        # (the snapshot here is Debian) since it selects Linux-style UI conventions.
+        return "ubuntu"
+
+    @property
+    def dimensions(self) -> tuple[int, int]:
+        return (self._width, self._height)
+
+    async def screenshot(self) -> str:
+        response = await self._sandbox.computer_use.screenshot.take_full_screen()
+        return response.screenshot or ""
+
+    async def click(self, x: int, y: int, button: Button) -> None:
+        if button not in ("left", "right"):
+            logger.warning("Daytona does not support %s clicks; ignoring.", button)
+            return
+        await self._sandbox.computer_use.mouse.click(x, y, button)
+
+    async def double_click(self, x: int, y: int) -> None:
+        await self._sandbox.computer_use.mouse.click(x, y, "left", True)
+
+    async def scroll(self, x: int, y: int, scroll_x: int, scroll_y: int) -> None:
+        if scroll_y != 0:
+            direction = "down" if scroll_y > 0 else "up"
+            amount = max(1, abs(scroll_y) // 100)
+            await self._sandbox.computer_use.mouse.scroll(x, y, direction, amount)
+        if scroll_x != 0:
+            logger.warning(
+                "Daytona does not support horizontal scrolling; ignoring scroll_x=%d.",
+                scroll_x,
+            )
+
+    async def type(self, text: str) -> None:
+        await self._sandbox.computer_use.keyboard.type(text)
+
+    async def wait(self) -> None:
+        await asyncio.sleep(1)
+
+    async def move(self, x: int, y: int) -> None:
+        await self._sandbox.computer_use.mouse.move(x, y)
+
+    async def keypress(self, keys: list[str]) -> None:
+        if not keys:
+            return
+        if len(keys) == 1:
+            await self._sandbox.computer_use.keyboard.press(_normalize_key(keys[0]))
+        else:
+            # Multiple keys: treat the last as the primary key, the rest as modifiers.
+            *modifiers, key = keys
+            await self._sandbox.computer_use.keyboard.press(
+                _normalize_key(key), [_normalize_key(m) for m in modifiers]
+            )
+
+    async def drag(self, path: list[tuple[int, int]]) -> None:
+        if len(path) < 2:
+            return
+        # Daytona drag takes start -> end; chain segments for multi-point paths.
+        for i in range(len(path) - 1):
+            sx, sy = path[i]
+            ex, ey = path[i + 1]
+            await self._sandbox.computer_use.mouse.drag(sx, sy, ex, ey)
+The form, the data, and the prompt
+
+The form we’ll fill lives in form.html in this folder. It is a single-page HTML registration form with five fieldsets: personal info, professional details, conference preferences, travel/accommodation, and additional info. The fields cover text inputs, emails, phone, dates, <select> dropdowns, radio groups, multi-select checkbox groups with a maximum limit, and a textarea. It also includes client-side validation and a confirmation view, so we can visually tell the run succeeded.
+
+We tell the agent what to do in three parts:
+
+APPLICANT_DATA: the facts the agent must enter, loaded from fake_applicant_data.txt in this folder.
+INSTRUCTIONS: the system prompt, guidance on filling the form.
+TASK: the short user turn that kicks off the run.
+
+We also pin the sandbox snapshot and the server port here. The snapshot daytonaio/sandbox:0.6.0 is the Daytona-published image with a desktop environment and a browser preinstalled.
+
+# Desktop snapshot that ships with a browser and a desktop environment.
+_DESKTOP_SNAPSHOT = "daytonaio/sandbox:0.6.0"
+
+# Where the form lives inside the sandbox, and the port we serve it on.
+_FORM_DIR = "/home/daytona/form"
+_SERVER_PORT = 8080
+
+# The applicant facts the agent must enter.
+APPLICANT_DATA = Path("fake_applicant_data.txt").read_text()
+
+INSTRUCTIONS = """\
+You control a remote Linux desktop via mouse, keyboard, and screenshots.
+A conference registration form is being served at http://localhost:8080.
+
+When asked to fill the form:
+1. Open a browser (look for one in the taskbar or application menu).
+2. Navigate to http://localhost:8080.
+3. Fill every field using the applicant data the user provides. The form
+   spans multiple sections, so scroll down to see them all.
+4. Click "Complete Registration".
+5. When you see the "Registration Complete!" confirmation, take a screenshot
+   and say DONE.
+"""
+
+TASK = f"Fill the conference registration form with this applicant data:\n\n{APPLICANT_DATA}"
+Create the sandbox
+
+AsyncDaytona() reads the API key from DAYTONA_API_KEY. daytona.create(...) spins up a sandbox from the desktop snapshot; the call returns once the sandbox is ready for filesystem and process operations. The sandbox handle is what we pass to everything downstream: the form uploader, the HTTP server launcher, the recording API, and the DaytonaAsyncComputer adapter.
+
+We hold onto daytona and sandbox as notebook-level variables so later cells can operate on them, and we tear them down explicitly in the last cell.
+
+daytona = AsyncDaytona()
+sandbox = await daytona.create(
+    CreateSandboxFromSnapshotParams(snapshot=_DESKTOP_SNAPSHOT),
+)
+print(f"Sandbox ready: {sandbox.id}")
+Sandbox ready: 6a6ca6a5-f49a-4562-a3f2-4d1717c0131d
+Serve the form inside the sandbox
+
+We upload form.html into the sandbox and serve it with python3 -m http.server on port 8080. Two small details:
+
+The Daytona Python SDK uploads bytes, not paths, so we read form.html on the host and push the bytes to /home/daytona/form/index.html.
+sandbox.process.exec(...) waits for the child’s stdout/stderr pipes to close, so a naive python3 -m http.server & would hang even though the shell exits — the backgrounded server keeps those pipes open. Redirecting stdout/stderr to a log file closes the inherited pipes, so exec returns immediately and the server keeps running.
+form_html = Path("form.html").read_bytes()
+await sandbox.fs.create_folder(_FORM_DIR, "0755")
+await sandbox.fs.upload_file(form_html, f"{_FORM_DIR}/index.html")
+print(f"Form uploaded to {_FORM_DIR}/index.html")
+
+await sandbox.process.exec(
+    f"sh -c 'cd {_FORM_DIR} && python3 -m http.server {_SERVER_PORT} "
+    f"> /tmp/httpd.log 2>&1 &'"
+)
+
+# Poll until the server answers (or fail after a few seconds).
+for _ in range(10):
+    check = await sandbox.process.exec(
+        f"curl -sf -o /dev/null http://localhost:{_SERVER_PORT}/"
+    )
+    if check.exit_code == 0:
+        break
+    await asyncio.sleep(0.5)
+else:
+    raise RuntimeError(f"HTTP server did not respond on port {_SERVER_PORT}")
+
+print(f"HTTP server started on port {_SERVER_PORT}")
+Form uploaded to /home/daytona/form/index.html
+HTTP server started on port 8080
+Run the agent
+
+This is the main event. We:
+
+Enter the DaytonaAsyncComputer context manager, which starts the sandbox’s computer-use processes (Xvfb, window manager, VNC).
+Start a session recording. sandbox.computer_use.recording.start(...) returns a handle we need later to stop and download.
+Build the Agent with a single tool, ComputerTool(computer=computer), and run it with Runner.run(...) inside a trace(...) block so the run shows up in the OpenAI traces dashboard.
+In a finally block, stop the recording and download it locally, using the filename Daytona reports (currently an .mp4).
+
+max_turns=50 is a generous ceiling for a form this size; a good run will come in well under that.
+
+async with DaytonaAsyncComputer(sandbox) as computer:
+    recording = await sandbox.computer_use.recording.start("form-fill")
+    print(f"Recording started: {recording.id}")
+
+    try:
+        with trace("Daytona form-fill demo"):
+            agent = Agent(
+                name="Form filler",
+                instructions=INSTRUCTIONS,
+                tools=[ComputerTool(computer=computer)],
+                model="gpt-5.4",
+            )
+            result = await Runner.run(agent, TASK, max_turns=50)
+            print(f"\n--- Final output ---\n{result.final_output}")
+    finally:
+        stopped = await sandbox.computer_use.recording.stop(recording.id)
+        print(f"\nRecording stopped: {stopped.file_name} ({stopped.status})")
+
+        local_recording_path = Path(stopped.file_name).name
+        await sandbox.computer_use.recording.download(recording.id, local_recording_path)
+        print(f"Recording downloaded to: {local_recording_path}")
+Recording started: de5b8077-352e-41b0-b2da-165ede8cbca0
+
+--- Final output ---
+DONE
+
+Recording stopped: de5b8077-352e-41b0-b2da-165ede8cbca0_form-fill_20260419_161419.mp4 (completed)
+Recording downloaded to: de5b8077-352e-41b0-b2da-165ede8cbca0_form-fill_20260419_161419.mp4
+Watch the recording
+
+Play it inline to see the agent fill the form included in this folder end to end.
+
+Video(local_recording_path, embed=True)
+Clean up the sandbox
+
+Delete the sandbox when you’re done. Daytona will also tear it down automatically on its own schedule, but explicit deletion keeps the account tidy and guarantees you aren’t billed for idle time.
+
+await daytona.delete(sandbox)
+print(f"Sandbox {sandbox.id} deleted.")
+Sandbox 6a6ca6a5-f49a-4562-a3f2-4d1717c0131d deleted.
+Where to take this next
+Other kinds of forms. This pattern works for any web form the agent can reach from a browser. Swap form.html for a different page, or drop the HTTP server and point the agent at an external URL.
+Other backends. AsyncComputer is the portable interface here. If you swap the adapter and the sandbox for a different CUA-capable desktop, the rest of the notebook stays the same.
+Evals. Verification can run inside the sandbox: compare the submitted payload against APPLICANT_DATA and you have a deterministic form-filling eval.

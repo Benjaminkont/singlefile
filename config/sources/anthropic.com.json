@@ -1,0 +1,148 @@
+{
+  "name": "Anthropic",
+  "origin": "https://www.anthropic.com",
+  "targets": [
+    {
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "file": "research-building-effective-agents-38c43325a5.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/managed-agents",
+      "title": "Scaling Managed Agents: Decoupling the brain from the hands",
+      "file": "research-managed-agents-a76463269f.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/harness-design-long-running-apps",
+      "title": "Harness design for long-running application development",
+      "file": "research-harness-design-long-running-apps-9674175d11.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
+      "title": "Effective harnesses for long-running agents",
+      "file": "research-effective-harnesses-for-long-running-agents-678054878c.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/advanced-tool-use",
+      "title": "Introducing advanced tool use on the Claude Developer Platform",
+      "file": "research-advanced-tool-use-c81bbcb144.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/code-execution-with-mcp",
+      "title": "Code execution with MCP: Building more efficient agents",
+      "file": "research-code-execution-with-mcp-9b15778f8a.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills",
+      "title": "Equipping agents for the real world with Agent Skills",
+      "file": "research-equipping-agents-for-the-real-world-with-agent-skills-5132cc384b.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+      "title": "Effective context engineering for AI agents",
+      "file": "research-effective-context-engineering-for-ai-agents-6d7ad609a0.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/writing-tools-for-agents",
+      "title": "Writing effective tools for agents — with agents",
+      "file": "research-writing-tools-for-agents-b839781882.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/desktop-extensions",
+      "title": "Desktop Extensions: One-click MCP server installation for Claude Desktop",
+      "file": "research-desktop-extensions-087ba17249.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/multi-agent-research-system",
+      "title": "How we built our multi-agent research system",
+      "file": "research-multi-agent-research-system-ea7cfd31aa.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/claude-think-tool",
+      "title": "The \"think\" tool: Enabling Claude to stop and think in complex tool use situations",
+      "file": "research-claude-think-tool-d2127010b0.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/contextual-retrieval",
+      "title": "Introducing Contextual Retrieval",
+      "file": "research-contextual-retrieval-b852890527.html",
+      "collection": "engineering",
+      "collections": [
+        "engineering",
+        "research"
+      ],
+      "aliases": []
+    }
+  ]
+}

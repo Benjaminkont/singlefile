@@ -1,0 +1,25 @@
+{
+  "repository": "https://github.com/gildas-lormeau/single-file-cli.git",
+  "tag": "v2.16.1",
+  "commit": "156c32dd0de65d1ddb633840f88951a6733f59b8",
+  "saved_date": "2026-10-03",
+  "method": "git shallow clone, sparse checkout of README.MD and LICENSE",
+  "files": [
+    {
+      "file": "single-file-cli-v2.16.1/README.MD",
+      "url": "https://github.com/gildas-lormeau/single-file-cli/blob/156c32dd0de65d1ddb633840f88951a6733f59b8/README.MD",
+      "sha256": "421daaa2da2b4daffdbde35fe0a7e793d114a24ab37fbaa423cf452184df5109"
+    },
+    {
+      "file": "single-file-cli-v2.16.1/LICENSE",
+      "url": "https://github.com/gildas-lormeau/single-file-cli/blob/156c32dd0de65d1ddb633840f88951a6733f59b8/LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    }
+  ],
+  "local_help": {
+    "file": "本机完整命令帮助.txt",
+    "command": "node scripts/single-file.mjs --help",
+    "version": "2.16.1",
+    "sha256": "40743ac32d9d55e4138098a6c08c704c0e4fc55e9bf1c351fbdc308fe9e41fad"
+  }
+}
